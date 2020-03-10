@@ -6,6 +6,11 @@ RUN apk add --no-cache \
   openssl-dev \
   openssh
 
+# library dependencies of xml module
+RUN apk add --no-cache \
+  libxml2-dev \
+  libxslt-dev
+
 RUN pip install ansible
 
 WORKDIR /ansible
